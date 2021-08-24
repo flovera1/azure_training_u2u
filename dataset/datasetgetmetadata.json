@@ -1,0 +1,20 @@
+{
+	"name": "datasetgetmetadata",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "connectionfernando",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"folderPath": "ALL_THE_FILES_TOGETHER",
+				"fileSystem": "datalake"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	}
+}
