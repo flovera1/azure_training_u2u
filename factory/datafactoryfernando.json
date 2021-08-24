@@ -1,0 +1,9 @@
+{
+	"name": "datafactoryfernando",
+	"location": "westeurope",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "aed6d8f2-f59f-4f10-b7ac-5f7f1e53dacc",
+		"tenantId": "b3680828-8bce-4405-9349-17844fcea2c9"
+	}
+}

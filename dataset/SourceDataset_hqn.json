@@ -1,0 +1,54 @@
+{
+	"name": "SourceDataset_hqn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "BLOBBabsSource",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "201508_station_data.csv",
+				"folderPath": "RAW/BABS/Station",
+				"container": "datalake"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "station_id",
+				"type": "String"
+			},
+			{
+				"name": "name",
+				"type": "String"
+			},
+			{
+				"name": "lat",
+				"type": "String"
+			},
+			{
+				"name": "long",
+				"type": "String"
+			},
+			{
+				"name": "dockcount",
+				"type": "String"
+			},
+			{
+				"name": "landmark",
+				"type": "String"
+			},
+			{
+				"name": "installation",
+				"type": "String"
+			}
+		]
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,22 @@
+{
+	"name": "DestinationDataset_hqn",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "connectionfernando",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "Parquet",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": "file_curated",
+				"folderPath": "CURATED",
+				"fileSystem": "datalake"
+			},
+			"compressionCodec": "snappy"
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
