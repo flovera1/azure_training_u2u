@@ -95,7 +95,7 @@
 							"userProperties": [],
 							"typeProperties": {
 								"expression": {
-									"value": "@less(activity('GetMetadata1').output.size,200000)",
+									"value": "@less(activity('Get Metadata1').output.size, 200000)",
 									"type": "Expression"
 								}
 							}
