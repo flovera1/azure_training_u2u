@@ -1,0 +1,24 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "datafactoryfernando"
+		},
+		"BLOBBabsSource_connectionString": {
+			"value": ""
+		},
+		"connection1fernando_connectionString": {
+			"value": ""
+		},
+		"connectionfernando_accountKey": {
+			"value": ""
+		},
+		"yetanotherconnection_connectionString": {
+			"value": ""
+		},
+		"connectionfernando_properties_typeProperties_url": {
+			"value": "https://dlstorageaccountfer.dfs.core.windows.net"
+		}
+	}
+}

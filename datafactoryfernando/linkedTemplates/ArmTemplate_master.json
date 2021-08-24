@@ -1,0 +1,77 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "datafactoryfernando"
+		},
+		"BLOBBabsSource_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'BLOBBabsSource'"
+		},
+		"connection1fernando_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'connection1fernando'"
+		},
+		"connectionfernando_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'connectionfernando'"
+		},
+		"yetanotherconnection_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'yetanotherconnection'"
+		},
+		"connectionfernando_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://dlstorageaccountfer.dfs.core.windows.net"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "datafactoryfernando_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"BLOBBabsSource_connectionString": {
+						"value": "[parameters('BLOBBabsSource_connectionString')]"
+					},
+					"connection1fernando_connectionString": {
+						"value": "[parameters('connection1fernando_connectionString')]"
+					},
+					"connectionfernando_accountKey": {
+						"value": "[parameters('connectionfernando_accountKey')]"
+					},
+					"yetanotherconnection_connectionString": {
+						"value": "[parameters('yetanotherconnection_connectionString')]"
+					},
+					"connectionfernando_properties_typeProperties_url": {
+						"value": "[parameters('connectionfernando_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}
