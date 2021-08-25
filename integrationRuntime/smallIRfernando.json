@@ -1,0 +1,18 @@
+{
+	"name": "smallIRfernando",
+	"properties": {
+		"type": "Managed",
+		"description": "small cluster for running sample data flows",
+		"typeProperties": {
+			"computeProperties": {
+				"location": "AutoResolve",
+				"dataFlowProperties": {
+					"computeType": "General",
+					"coreCount": 8,
+					"timeToLive": 15,
+					"cleanup": false
+				}
+			}
+		}
+	}
+}
